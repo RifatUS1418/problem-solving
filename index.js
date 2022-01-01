@@ -36,8 +36,6 @@ const vaxTrail = (groups) => {
         return sortedLine;
     }
 
-
-
     return {
         A,
         B,
@@ -60,22 +58,4 @@ const vacineClaimed = [
 const vacinated = vaxTrail(vacineClaimed);
 console.log(vacinated);
 
-// const age = vacineClaimed.map(vacine => vacine.age)
-// console.log(age);
-
-function sorted(array) {
-    for (let i = 0; i < array.length; i++) {
-        let min = i;
-        for (let j = i; j < array.length; j++) {
-            if (array[j] < array[min]) {
-                min = j
-            }
-        }
-        [array[i], array[min]] = [array[min], array[i]];
-    }
-    return array;
-}
-
-// const sortedNUmber = sorted(age);
-// console.log(sortedNUmber);
 
