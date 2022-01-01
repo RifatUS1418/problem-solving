@@ -7,7 +7,6 @@ const vaxTrail = (groups) => {
 
     const lineC = groups.filter(group => (group.age >= 41 && group.age <= 50 && group.temperature < 100));
     const C = sortedObject(lineC);
-    console.log(C)
 
     const lineD = groups.filter(group => group.temperature > 100);
     const D = sortedObject(lineD);
@@ -16,7 +15,7 @@ const vaxTrail = (groups) => {
 
     function sortedObject(peoples) {
         const age = peoples.map(people => people.age)
-        console.log(age);
+        // console.log(age);
         const sortedAges = sorted(age);
         const sortedLine = sortedAges.map(sortedAge => peoples.find(person => person.age === sortedAge));
 
@@ -48,10 +47,13 @@ const vacineClaimed = [
     { name: 'sunil', age: 21, temperature: 98 },
     { name: 'Biplap', age: 22, temperature: 98 },
     { name: 'Kabir', age: 36, temperature: 99 },
-    { name: 'Rahul', age: 37, temperature: 99 },
-    { name: 'Paul', age: 42, temperature: 98 },
-    { name: 'Kat', age: 41, temperature: 98 },
-    { name: 'Nayem', age: 50, temperature: 100 },
+    { name: 'Rahul', age: 70, temperature: 99 },
+    { name: 'Rahul', age: 50, temperature: 99 },
+    { name: 'Rahul', age: 32, temperature: 99 },
+    { name: 'Rahul', age: 21, temperature: 99 },
+    { name: 'Paul', age: 41, temperature: 98 },
+    { name: 'Kat', age: 45, temperature: 94 },
+    { name: 'Nayem', age: 50, temperature: 102 },
     { name: 'Sabnaj', age: 51, temperature: 101 }
 ]
 
